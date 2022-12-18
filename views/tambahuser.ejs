@@ -1,0 +1,64 @@
+<%- include('inc/header.ejs') -%>
+    <%- include('inc/navbar.ejs') -%>
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Data Anggota</h1>
+            </div>
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Form Tambah Anggota</h1>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-lg my-5" style="width: 50rem; padding: 50px;">
+
+                <form method="post" action="<%= url %>penduduk/add">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nomor Induk Keluarga</label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp" name="nik">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" name="no_tlp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nomor Rumah</label>
+                        <input type="text" class="form-control" name="no_rumah">
+                    </div>
+                    <div class=" mb-3">
+                        <label for="exampleInputPassword1 " class="form-label ">Gender</label>
+                        <select class="form-select " aria-label="Default select example " name="gender">
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="exampleInputEmail1 " class="form-label ">Email address</label>
+                        <input type="email " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp" name="username">
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="exampleInputPassword1 " class="form-label ">Password</label>
+                        <input type="password " class="form-control " id="exampleInputPassword1 " name="password">
+                    </div>
+                    <div class=" mb-3 ">
+                        <button type="submit " class="btn btn-primary ">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <%- include('inc/footer.ejs') -%>
